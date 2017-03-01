@@ -8,7 +8,7 @@ public class Team implements Comparable{
         name = n;
         wlr = w/l;
     }
-    //wew lad
+    //wew la
     public String name;
     public double wlr;
     public int compareTo(Object t){
