@@ -19,11 +19,16 @@ public class Main {
             - Win/Loss is set to 1 due to insufficient information (for now)
              */
         }
-        /*
-        System.out.println(teams.size()); // Tests out how many teams there are
-        Team test = (Team)teams.get(0);
-        System.out.println("Team ID of " + test.name + ": " +test.returnID());
-       
-        */
+        Scanner scanResults = new Scanner(new File("src/com/company/RegularSeasonCompactResults.csv"));
+        while (scanResults.hasNextLine()) {
+            String line = scanResults.nextLine();
+            String [] divisions = line.split(",");
+            Team temp
+            //Season,Daynum,Wteam,Wscore,Lteam,Lscore,Wloc,Numot
+            int ID = temp.teamID;
+            for (int i = 0; i < teams.size(); i++) {
+
+            }
+        }
     }
 }

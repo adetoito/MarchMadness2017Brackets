@@ -4,12 +4,15 @@ public class Team implements Comparable {
 
     public Team (String n, int w, int l, int id){
         name = n;
-        wlr = w/l;
+        wins = w;
+        losses = l;
         teamID = id;
     }
 
     public String name;
     public double wlr;
+    public int wins;
+    public int losses;
     public int teamID;
 
     public int compareTo (Object t) {
@@ -24,8 +27,15 @@ public class Team implements Comparable {
         }
     }
 
-    public int returnID () {
-        return teamID;
+    public void addWin () {
+        if (wins != 1) {
+            wins++;
+        }
     }
 
+    public void addLoss () {
+        if (losses != 1) {
+            losses++;
+        }
+    }
 }
