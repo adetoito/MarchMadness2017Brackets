@@ -23,6 +23,7 @@ public class Main {
         System.out.println(teams.size()); // Tests out how many teams there are
         Team test = (Team)teams.get(0);
         System.out.println("Team ID of " + test.name + ": " +test.returnID());
+        
         */
     }
 }
