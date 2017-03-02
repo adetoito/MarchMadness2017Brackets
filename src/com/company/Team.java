@@ -16,9 +16,9 @@ public class Team implements Comparable {
     public int compareTo (Object t) {
         Team tt = (Team)t;
 
-        if (tt.wlr > wlr) {
+        if (tt.i > i) {
             return -1;
-        } else if (tt.wlr == wlr) {
+        } else if (tt.i== i) {
             return 0;
         } else {
             return 1;
