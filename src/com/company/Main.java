@@ -11,7 +11,7 @@ public class Main {
         while (scanTeams.hasNextLine()) {
             String line = scanTeams.nextLine(); // Takes the line that the scanner is reading.
             String [] divisions = line.split(","); // Splits the line into a String array at a comma.
-            teams.add(new Team(divisions[1], 1, 1, Integer.parseInt(divisions[0])));
+            teams.add(new Team(divisions[1],  Integer.parseInt(divisions[0])));
             /*
             Above:
             - Adds information into a Team object
