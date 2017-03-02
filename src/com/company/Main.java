@@ -19,15 +19,21 @@ public class Main {
             - Win/Loss is set to 1 due to insufficient information (for now)
              */
         }
+
         Scanner scanResults = new Scanner(new File("src/com/company/RegularSeasonCompactResults.csv"));
         while (scanResults.hasNextLine()) {
             String line = scanResults.nextLine();
             String [] divisions = line.split(",");
-            Team temp
             //Season,Daynum,Wteam,Wscore,Lteam,Lscore,Wloc,Numot
-            int ID = temp.teamID;
             for (int i = 0; i < teams.size(); i++) {
-
+                Team temp = (Team)teams.get(i);
+                int ID = temp.teamID;
+                if (ID == Integer.parseInt(divisions[2])) {
+                    temp.addWin();
+                }
+                if (ID == Integer.parseInt(divisions[4])) {
+                    temp.addLoss();
+                }
             }
         }
     }
