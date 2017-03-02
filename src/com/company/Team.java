@@ -2,13 +2,11 @@ package com.company;
 
 public class Team implements Comparable {
 
-    public Team (String n, int w, int l, int id){
+    public Team (String n,int id){
         name = n;
-        wins = w;
-        losses = l;
         teamID = id;
     }
-
+    public int i;
     public String name;
     public double wlr;
     public int wins;
@@ -27,15 +25,7 @@ public class Team implements Comparable {
         }
     }
 
-    public void addWin () {
-        if (wins != 1) {
-            wins++;
-        }
-    }
-
-    public void addLoss () {
-        if (losses != 1) {
-            losses++;
-        }
+    public void iDubbbz(int w){
+        i+=w;
     }
 }
