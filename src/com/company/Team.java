@@ -6,6 +6,7 @@ public class Team implements Comparable {
         name = n;
         teamID = id;
     }
+
     public int i;
     public String name;
     public double wlr;
@@ -25,11 +26,29 @@ public class Team implements Comparable {
         }
     }
 
-    public void iDubbbz (int w) {
-        i += w;
+    public void addWin (int yr) {
+        switch (yr) {
+            case 2013:
+                i += 1;
+            case 2014:
+                i += 2;
+            case 2015:
+                i += 3;
+            case 2016:
+                i += 4;
+        }
     }
 
-    public void FilthyFrank (int l) {
-        i -= l;
+    public void addLoss (int yr) {
+        switch (yr) {
+            case 2013:
+                i -= 1;
+            case 2014:
+                i -= 2;
+            case 2015:
+                i -= 3;
+            case 2016:
+                i -= 4;
+        }
     }
 }

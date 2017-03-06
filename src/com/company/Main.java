@@ -29,12 +29,26 @@ public class Main {
                 Team temp = (Team)teams.get(i);
                 int ID = temp.teamID;
                 if (ID == Integer.parseInt(divisions[2])) {
-                    temp.addWin();
+                    temp.addWin(Integer.parseInt(divisions[0]));
                 }
                 if (ID == Integer.parseInt(divisions[4])) {
-                    temp.addLoss();
+                    temp.addLoss(Integer.parseInt(divisions[0]));
                 }
             }
+            /*
+            for (int ID = 1101; ID < 1464; ID++) {
+                if (ID == Integer.parseInt(divisions[2])) {
+                    (Team)teams.get(ID - 1101).addWin(Integer.parseInt(divisions[0]));
+                }
+                if (ID == Integer.parseInt(divisions[4])) {
+                    (Team)teams.get(ID - 1101).addLoss(Integer.parseInt(divisions[0]));
+                }
+            }
+            */
+
+            // This is a test for the above methods:
+
+            // Sort all teams based off of integer "i" (Brandon type your code below)
         }
     }
 }
