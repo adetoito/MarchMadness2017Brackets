@@ -18,14 +18,18 @@ public class Team implements Comparable {
 
         if (tt.i > i) {
             return -1;
-        } else if (tt.i== i) {
+        } else if (tt.i == i) {
             return 0;
         } else {
             return 1;
         }
     }
 
-    public void iDubbbz(int w){
-        i+=w;
+    public void iDubbbz (int w) {
+        i += w;
+    }
+
+    public void FilthyFrank (int l) {
+        i -= l;
     }
 }
