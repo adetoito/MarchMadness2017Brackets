@@ -9,9 +9,6 @@ public class Team implements Comparable {
 
     public int i;
     public String name;
-    public double wlr;
-    public int wins;
-    public int losses;
     public int teamID;
 
     public int compareTo (Object t) {

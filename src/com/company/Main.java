@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Scanner scanTeams = new Scanner(new File("src/com/company/Teams.csv"));
-        ArrayList teams = new ArrayList();
+        ArrayList<Team> teams = new ArrayList();
         while (scanTeams.hasNextLine()) {
             String line = scanTeams.nextLine(); // Takes the line that the scanner is reading.
-            String [] divisions = line.split(","); // Splits the line into a String array at a comma.
-            teams.add(new Team(divisions[1],  Integer.parseInt(divisions[0])));
+            String[] divisions = line.split(","); // Splits the line into a String array at a comma.
+            teams.add(new Team(divisions[1], Integer.parseInt(divisions[0])));
         }
 
         Scanner scanResults = new Scanner(new File("src/com/company/RegularSeasonCompactResults.csv"));
@@ -23,10 +23,10 @@ public class Main {
          */
         while (scanResults.hasNextLine()) {
             String line = scanResults.nextLine();
-            String [] divisions = line.split(",");
+            String[] divisions = line.split(",");
             //Season,Daynum,Wteam,Wscore,Lteam,Lscore,Wloc,Numot
             for (int i = 0; i < teams.size(); i++) {
-                Team temp = (Team)teams.get(i);
+                Team temp = (Team) teams.get(i);
                 int ID = temp.teamID;
                 if (ID == Integer.parseInt(divisions[2])) {
                     temp.addWin(Integer.parseInt(divisions[0]));
@@ -46,9 +46,14 @@ public class Main {
             }
             */
 
-            // This is a test for the above methods:
-
-            // Sort all teams based off of integer "i" (Brandon type your code below)
+        }
+        // Sort all teams based off of integer "i"
+        // NEW GOAL: Sort this in the opposite order!
+        Collections.sort(teams);
+        for (int i = 0; i < teams.size(); i++) {
+            Team shush = teams.get(i);
+            int s = shush.i;
+            System.out.println(s);
         }
     }
 }
