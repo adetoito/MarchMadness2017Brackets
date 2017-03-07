@@ -26,7 +26,7 @@ public class Main {
             String[] divisions = line.split(",");
             //Season,Daynum,Wteam,Wscore,Lteam,Lscore,Wloc,Numot
             for (int i = 0; i < teams.size(); i++) {
-                Team temp = (Team) teams.get(i);
+                Team temp = teams.get(i);
                 int ID = temp.teamID;
                 if (ID == Integer.parseInt(divisions[2])) {
                     temp.addWin(Integer.parseInt(divisions[0]));
@@ -50,10 +50,16 @@ public class Main {
         // Sort all teams based off of integer "i"
         // NEW GOAL: Sort this in the opposite order!
         Collections.sort(teams);
-        for (int i = 0; i < teams.size(); i++) {
-            Team shush = teams.get(i);
-            int s = shush.i;
-            System.out.println(s);
+        ArrayList<Team> sixtyfour = new ArrayList();
+        for (int i = teams.size() - 1; i > teams.size() - 65; i--) {
+            sixtyfour.add(teams.get(i));
+        }
+
+        // Prints out the 64 teams in the bracket
+        // Myers you might need this: \/ \/ \/
+        for (int i = 0; i < sixtyfour.size(); i++) {
+            Team temp = sixtyfour.get(i);
+            System.out.println(i + 1 + ": " + temp.name + " // Win/Loss: " + temp.i);
         }
     }
 }
