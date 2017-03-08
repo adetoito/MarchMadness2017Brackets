@@ -52,8 +52,8 @@ public class Main {
         // Brandon seized the means of production
         Collections.sort(teams);
         ArrayList<Team> sixtyfour = new ArrayList();
-        int [] odds = {1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63};
-        int [] evens = {2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64};
+        int [] odds = {0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62};
+        int [] evens = {1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63};
 
         for (int i = teams.size() - 1; i > teams.size() - 65; i--) {
             sixtyfour.add(teams.get(i));
@@ -73,28 +73,21 @@ public class Main {
         ArrayList<Team> d2 = new ArrayList();
 
         System.out.println("DIVISION ONE:");
-        for (int i = 0; i < odds.length - 1; i++) {
+        for (int i = 0; i < odds.length; i++) {
             int index = odds[i];
             Team temp = sixtyfour.get(index);
             d1.add(temp);
             System.out.println(i + 1 + ": " + temp.name);
         }
-        Team temp = sixtyfour.get(sixtyfour.size() - 2);
-        d2.add(temp);
-        System.out.println("32: " + temp.name);
 
         System.out.println("=============================\n");
         System.out.println("DIVISION TWO:");
-        for (int i = 0; i < evens.length - 1; i++) {
+        for (int i = 0; i < evens.length; i++) {
             int index = evens[i];
-            temp = sixtyfour.get(index);
+            Team temp = sixtyfour.get(index);
             d2.add(temp);
             System.out.println(i + 1 + ": " + temp.name);
         }
-        temp = sixtyfour.get(sixtyfour.size() - 1);
-        d2.add(temp);
-        System.out.println("32: " + temp.name);
-        System.out.println("=============================\n");
 
     }
 }
