@@ -88,6 +88,56 @@ public class Main {
             d2.add(temp);
             System.out.println(i + 1 + ": " + temp.name);
         }
+        ArrayList<Team> dd1 = new ArrayList();
+        ArrayList<Team> dd2 = new ArrayList();
+        ArrayList<Team> d3 = new ArrayList();
+        ArrayList<Team> d4 = new ArrayList();
+        for (int i = 0; i < d1.size(); i++) {
+            if(i % 2 != 0){
+                d3.add(d1.get(i));
+            }
+            else{
+                d4.add(d1.get(i));
+            }
+        }
+        for (int i = 0; i < d2.size(); i++) {
+            if(i % 2 != 0){
+                dd2.add(d2.get(i));
+            }
+            else{
+             dd1.add(d2.get(i));
+            }
+        }        System.out.println("===============");
 
+        System.out.println("div 1");
+        System.out.println("===============");
+
+        for (int i = 0; i < dd1.size(); i++) {
+            System.out.println(dd1.get(i).name);
+        }
+        System.out.println("===============");
+
+        System.out.println("div 2");
+        System.out.println("===============");
+
+        for (int i = 0; i < dd2.size(); i++) {
+            System.out.println(dd2.get(i).name);
+        }
+        System.out.println("===============");
+
+        System.out.println("div 3");
+        System.out.println("===============");
+
+        for (int i = 0; i < d3.size(); i++) {
+            System.out.println(d3.get(i).name);
+        }
+        System.out.println("===============");
+
+        System.out.println("div 4");
+        System.out.println("===============");
+
+        for (int i = 0; i < d4.size(); i++) {
+            System.out.println(d4.get(i).name);
+        }
     }
 }
