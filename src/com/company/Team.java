@@ -6,7 +6,6 @@ public class Team implements Comparable {
         name = n;
         teamID = id;
     }
-
     public int i;
     public String name;
     public int teamID;
