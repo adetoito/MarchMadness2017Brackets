@@ -61,18 +61,18 @@ public class Main {
 
         // Prints out the 64 teams in the bracket
         // Myers you might need this: \/ \/ \/
-        System.out.println("TEAMS:");
+        System.out.println("ALL TEAMS:");
         for (int i = 0; i < sixtyfour.size(); i++) {
             Team temp = sixtyfour.get(i);
             System.out.println(i + 1 + ": " + temp.name + " // Win/Loss: " + temp.i);
         }
-        System.out.println("=============================\n");
+       // System.out.println("=============================\n");
 
         // Divisions
         ArrayList<Team> d1 = new ArrayList();
         ArrayList<Team> d2 = new ArrayList();
 
-        System.out.println("DIVISION ONE:");
+        //System.out.println("DIVISION ONE:");
         for (int i = 0; i < odds.length; i++) {
             int index = odds[i];
             Team temp = sixtyfour.get(index);
@@ -80,8 +80,8 @@ public class Main {
           //  System.out.println(i + 1 + ": " + temp.name);
         }
 
-        System.out.println("=============================\n");
-        System.out.println("DIVISION TWO:");
+        //System.out.println("=============================\n");
+       // System.out.println("DIVISION TWO:");
         for (int i = 0; i < evens.length; i++) {
             int index = evens[i];
             Team temp = sixtyfour.get(index);
