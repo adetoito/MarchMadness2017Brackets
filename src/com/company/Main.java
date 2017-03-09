@@ -135,6 +135,20 @@ public class Main {
         for (int i = 0; i < d4.size(); i++) {
             System.out.println(d4.get(i).name);
         }
+        brakk(dd1);
 
+    }
+    public static void brakk (ArrayList<Team> a){
+        ArrayList div = new ArrayList<ArrayList>();
+        for (int i = 0; i < a.size(); i++) {
+            if(i%2==0){
+                div.add(new ArrayList<Team>(2));
+            }
+        }
+        for (int i = 0; i < div.size(); i++) {
+            ArrayList kms = (ArrayList)div.get(i);
+            kms.add(a.get(i));
+            kms.add(a.get(i+1));
+        }
     }
 }
