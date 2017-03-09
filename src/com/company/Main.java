@@ -72,16 +72,12 @@ public class Main {
         ArrayList<Team> d1 = new ArrayList();
         ArrayList<Team> d2 = new ArrayList();
 
-        System.out.println("DIVISION ONE:");
         for (int i = 0; i < odds.length; i++) {
             int index = odds[i];
             Team temp = sixtyfour.get(index);
             d1.add(temp);
           //  System.out.println(i + 1 + ": " + temp.name);
         }
-
-        System.out.println("=============================\n");
-        System.out.println("DIVISION TWO:");
         for (int i = 0; i < evens.length; i++) {
             int index = evens[i];
             Team temp = sixtyfour.get(index);
@@ -107,9 +103,9 @@ public class Main {
             else{
              dd1.add(d2.get(i));
             }
-        }        System.out.println("===============");
+        }
 
-        System.out.println("div 1");
+        System.out.println("Div 1");
         System.out.println("===============");
 
         for (int i = 0; i < dd1.size(); i++) {
@@ -117,7 +113,7 @@ public class Main {
         }
         System.out.println("===============");
 
-        System.out.println("div 2");
+        System.out.println("Div 2");
         System.out.println("===============");
 
         for (int i = 0; i < dd2.size(); i++) {
@@ -125,7 +121,7 @@ public class Main {
         }
         System.out.println("===============");
 
-        System.out.println("div 3");
+        System.out.println("Div 3");
         System.out.println("===============");
 
         for (int i = 0; i < d3.size(); i++) {
@@ -133,7 +129,7 @@ public class Main {
         }
         System.out.println("===============");
 
-        System.out.println("div 4");
+        System.out.println("Div 4");
         System.out.println("===============");
 
         for (int i = 0; i < d4.size(); i++) {

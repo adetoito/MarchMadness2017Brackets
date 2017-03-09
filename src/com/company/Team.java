@@ -26,26 +26,26 @@ public class Team implements Comparable {
     public void addWin (int yr) {
         switch (yr) {
             case 2013:
-                i += 1;
+                i += 10;
             case 2014:
-                i += 2;
+                i += 11;
             case 2015:
-                i += 3;
+                i += 12;
             case 2016:
-                i += 4;
+                i += 13;
         }
     }
 
     public void addLoss (int yr) {
         switch (yr) {
             case 2013:
-                i -= 1;
+                i -= 10;
             case 2014:
-                i -= 2;
+                i -= 11;
             case 2015:
-                i -= 3;
+                i -= 12;
             case 2016:
-                i -= 4;
+                i -= 13;
         }
     }
 }
