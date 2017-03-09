@@ -77,7 +77,7 @@ public class Main {
             int index = odds[i];
             Team temp = sixtyfour.get(index);
             d1.add(temp);
-            System.out.println(i + 1 + ": " + temp.name);
+          //  System.out.println(i + 1 + ": " + temp.name);
         }
 
         System.out.println("=============================\n");
@@ -86,7 +86,7 @@ public class Main {
             int index = evens[i];
             Team temp = sixtyfour.get(index);
             d2.add(temp);
-            System.out.println(i + 1 + ": " + temp.name);
+           // System.out.println(i + 1 + ": " + temp.name);
         }
         ArrayList<Team> dd1 = new ArrayList();
         ArrayList<Team> dd2 = new ArrayList();
