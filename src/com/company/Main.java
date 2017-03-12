@@ -135,11 +135,46 @@ public class Main {
         for (int i = 0; i < d4.size(); i++) {
             System.out.println(d4.get(i).name);
         }
+        System.out.println("============");
+
+        System.out.println("div 1 round 1");
+        System.out.println("============");
+       dd1 =  brakk(dd1);
+        System.out.println("============");
+
+        System.out.println("div 2 round 1");
+        System.out.println("============");
+
+        brakk(dd2);
+        System.out.println("============");
+
+        System.out.println("div 3 round 1");
+        System.out.println("============");
+
+        brakk(d3);
+        System.out.println("============");
+
+        System.out.println("div 4 round 1");
+        System.out.println("============");
+
+        brakk(d4);
+        System.out.println("============");
+
+        System.out.println("div 1 round 2");
+        System.out.println("============");
         brakk(dd1);
 
     }
-    public static void brakk (ArrayList<Team> a){
-        ArrayList div = new ArrayList<ArrayList>();
+    public static ArrayList brakk (ArrayList<Team> a){
+        System.out.println("g?");
+        for(Object o : a){
+            if(o instanceof Team){
+                System.out.println(((Team) o).getName());
+            }
+        }
+        System.out.println("idk");
+        ArrayList div = new ArrayList();
+        ArrayList newList = new ArrayList<Team>();
         for (int i = 0; i < a.size(); i++) {
             if(i%2==0){
                 div.add(new ArrayList<Team>(2));
@@ -147,8 +182,47 @@ public class Main {
         }
         for (int i = 0; i < div.size(); i++) {
             ArrayList kms = (ArrayList)div.get(i);
-            kms.add(a.get(i));
-            kms.add(a.get(i+1));
+            if(i%2==0 && a.get(i) != null) {
+
+                    kms.add(a.get(i));
+                    System.out.println(a.get(i).name);
+                try {
+                    kms.add(a.get(i + 1));
+                    System.out.println(a.get(i + 1).name);
+                }
+                catch(IndexOutOfBoundsException e){
+                    break;
+                }
+
+            }
         }
+        int jews = 0;
+        for(Object ar: div){
+            if(ar instanceof ArrayList && jews%2==0){
+                ArrayList lad = (ArrayList)div.get(jews);
+                Team g = (Team)lad.get(0);
+                Team n = (Team)lad.get(1);
+                System.out.println(g.name + " vs " + n.name);
+                if(g.compareTo(n) == 1){
+                    System.out.println(g.name+" wins");
+                    newList.add(g);
+                    System.out.println(" ");
+                }
+                else{
+                    System.out.println(n.name+ " wins");
+                    newList.add(n);
+                    System.out.println(" ");
+                }
+            }
+            jews++;
+        }
+        System.out.println("the holocaust");
+        for(Object o : newList){
+            if(o instanceof Team){
+                System.out.println(((Team) o).getName());
+            }
+        }
+        System.out.println("lmao");
+        return newList;
     }
 }

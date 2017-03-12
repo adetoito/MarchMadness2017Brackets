@@ -21,6 +21,9 @@ public class Team implements Comparable {
             return 1;
         }
     }
+    public String getName(){
+        return name;
+    }
 
     public void addWin (int yr) {
         switch (yr) {
