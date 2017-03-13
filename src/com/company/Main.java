@@ -236,7 +236,7 @@ public class Main {
 
         d4=brakk(d4);
         /*
-       tfw there are actually 68 teams and have no idea how to implement 4 more teams into your stupid program
+       tfw there are actually 68 teams and have no idea how to implement 4 more teams into your stupidly inefficient program
 __________████████_____██████
 _________█░░░░░░░░██_██░░░░░░█
 ________█░░░░░░░░░░░█░░░░░░░░░█
