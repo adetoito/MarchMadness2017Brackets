@@ -45,11 +45,8 @@ public class Main {
                 }
             }
             */
-
         }
         // Sort all teams based off of integer "i"
-        // NEW GOAL: Sort this in the opposite order!
-        // Brandon seized the means of production
         Collections.sort(teams);
         ArrayList<Team> sixtyfour = new ArrayList();
         int [] odds = {0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62};
@@ -60,7 +57,7 @@ public class Main {
         }
 
         // Prints out the 64 teams in the bracket
-        // Myers you might need this: \/ \/ \/
+
         System.out.println("TEAMS:");
         for (int i = 0; i < sixtyfour.size(); i++) {
             Team temp = sixtyfour.get(i);
@@ -214,9 +211,7 @@ public class Main {
         System.out.println("============");
 
         d4=brakk(d4);
-        /*
-        die
-         */
+
         System.out.println("============");
 
         System.out.println("div 1 round 4");
@@ -240,9 +235,7 @@ public class Main {
         System.out.println("============");
 
         d4=brakk(d4);
-        /*
-        meme
-         */
+
         ArrayList<Team> one = new ArrayList<>();
         one.add(dd1.get(0));
         one.add(dd2.get(0));
@@ -261,29 +254,24 @@ public class Main {
         System.out.println("============");
 
         two=brakk(two);
-        /*
-        harambe lol
-         */
-        ArrayList<Team> yeah = new ArrayList<>();
-        yeah.add(one.get(0));
-        yeah.add(two.get(0));
+
+        ArrayList<Team> TeamL = new ArrayList<>();
+        TeamL.add(one.get(0));
+        TeamL.add(two.get(0));
         System.out.println("============");
 
         System.out.println("Final round");
         System.out.println("============");
 
-        yeah= brakk(yeah);
-
+        TeamL = brakk(TeamL);
 
     }
     public static ArrayList brakk (ArrayList<Team> a){
-      //  System.out.println("g?");
         for(Object o : a){
             if(o instanceof Team){
                 //System.out.println(((Team) o).getName());
             }
         }
-      //  System.out.println("idk");
         ArrayList div = new ArrayList();
         ArrayList newList = new ArrayList<Team>();
         for (int i = 0; i < a.size(); i++) {
@@ -291,23 +279,20 @@ public class Main {
                 div.add(new ArrayList<Team>(2));
             }
         }
-      //  System.out.println("the siakjfqekjwfnjkjk erwga:  " + div.size());
         for (int i = 0; i < div.size(); i++) {
            // System.out.println(i);
             if(i%2==0) {
-                ArrayList kms = (ArrayList)div.get(i);
-                    kms.add(a.get(i));
+                ArrayList ListL = (ArrayList)div.get(i);
+                ListL.add(a.get(i));
                    // System.out.println("no " + a.get(i).name + " :idk:" + i);
-                    kms.add(a.get(i + 1));
+                ListL.add(a.get(i + 1));
                  //   System.out.println("yeah "+ a.get(i + 1).name);
-
-
             }
         }
-        int jews = 0;
+        int varia = 0;
         for(Object ar: div){
-            if(ar instanceof ArrayList && jews%2==0){
-                ArrayList lad = (ArrayList)div.get(jews);
+            if(ar instanceof ArrayList && varia%2==0){
+                ArrayList lad = (ArrayList)div.get(varia);
                 Team g = (Team)lad.get(0);
                 Team n = (Team)lad.get(1);
                 System.out.println(g.name + " vs " + n.name);
@@ -322,15 +307,13 @@ public class Main {
                     System.out.println(" ");
                 }
             }
-            jews++;
+            varia++;
         }
-  //      System.out.println("the holocaust");
         for(Object o : newList){
             if(o instanceof Team){
           //      System.out.println(((Team) o).getName());
             }
         }
-       // System.out.println("lmao");
         return newList;
     }
 }
