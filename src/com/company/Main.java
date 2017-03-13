@@ -145,54 +145,162 @@ public class Main {
         System.out.println("div 2 round 1");
         System.out.println("============");
 
-        brakk(dd2);
+        dd2 = brakk(dd2);
         System.out.println("============");
 
         System.out.println("div 3 round 1");
         System.out.println("============");
 
-        brakk(d3);
+       d3= brakk(d3);
         System.out.println("============");
 
         System.out.println("div 4 round 1");
         System.out.println("============");
 
-        brakk(d4);
+        d4=brakk(d4);
+
+        /*
+        WEW LAD
+         */
+
         System.out.println("============");
 
         System.out.println("div 1 round 2");
         System.out.println("============");
-        brakk(dd1);
+        dd1 =  brakk(dd1);
+        System.out.println("============");
+
+        System.out.println("div 2 round 2");
+        System.out.println("============");
+
+        dd2 = brakk(dd2);
+        System.out.println("============");
+
+        System.out.println("div 3 round 2");
+        System.out.println("============");
+
+        d3= brakk(d3);
+        System.out.println("============");
+
+        System.out.println("div 4 round 2");
+        System.out.println("============");
+
+        d4=brakk(d4);
+
+        /*
+       LAD WEW
+         */
+
+        System.out.println("============");
+
+        System.out.println("div 1 round 3");
+        System.out.println("============");
+        dd1 =  brakk(dd1);
+        System.out.println("============");
+
+        System.out.println("div 2 round 3");
+        System.out.println("============");
+
+        dd2 = brakk(dd2);
+        System.out.println("============");
+
+        System.out.println("div 3 round 3");
+        System.out.println("============");
+
+        d3= brakk(d3);
+        System.out.println("============");
+
+        System.out.println("div 4 round 3");
+        System.out.println("============");
+
+        d4=brakk(d4);
+        /*
+        die
+         */
+        System.out.println("============");
+
+        System.out.println("div 1 round 4");
+        System.out.println("============");
+        dd1 =  brakk(dd1);
+        System.out.println("============");
+
+        System.out.println("div 2 round 4");
+        System.out.println("============");
+
+        dd2 = brakk(dd2);
+        System.out.println("============");
+
+        System.out.println("div 3 round 4");
+        System.out.println("============");
+
+        d3= brakk(d3);
+        System.out.println("============");
+
+        System.out.println("div 4 round 4");
+        System.out.println("============");
+
+        d4=brakk(d4);
+        /*
+        meme
+         */
+        ArrayList<Team> one = new ArrayList<>();
+        one.add(dd1.get(0));
+        one.add(dd2.get(0));
+        ArrayList<Team> two = new ArrayList<>();
+        two.add(d3.get(0));
+        two.add(d4.get(0));
+        System.out.println("============");
+
+        System.out.println("Semifinals round 1");
+        System.out.println("============");
+
+        one= brakk(one);
+        System.out.println("============");
+
+        System.out.println("Semifinals round 2");
+        System.out.println("============");
+
+        two=brakk(two);
+        /*
+        harambe lol
+         */
+        ArrayList<Team> yeah = new ArrayList<>();
+        yeah.add(one.get(0));
+        yeah.add(two.get(0));
+        System.out.println("============");
+
+        System.out.println("Final round");
+        System.out.println("============");
+
+        yeah= brakk(yeah);
+
 
     }
     public static ArrayList brakk (ArrayList<Team> a){
-        System.out.println("g?");
+      //  System.out.println("g?");
         for(Object o : a){
             if(o instanceof Team){
-                System.out.println(((Team) o).getName());
+                //System.out.println(((Team) o).getName());
             }
         }
-        System.out.println("idk");
+      //  System.out.println("idk");
         ArrayList div = new ArrayList();
         ArrayList newList = new ArrayList<Team>();
         for (int i = 0; i < a.size(); i++) {
-            if(i%2==0){
+            if(true){
                 div.add(new ArrayList<Team>(2));
             }
         }
+      //  System.out.println("the siakjfqekjwfnjkjk erwga:  " + div.size());
         for (int i = 0; i < div.size(); i++) {
-            ArrayList kms = (ArrayList)div.get(i);
-            if(i%2==0 && a.get(i) != null) {
-
+           // System.out.println(i);
+            if(i%2==0) {
+                ArrayList kms = (ArrayList)div.get(i);
                     kms.add(a.get(i));
-                    System.out.println(a.get(i).name);
-                try {
+                   // System.out.println("no " + a.get(i).name + " :idk:" + i);
                     kms.add(a.get(i + 1));
-                    System.out.println(a.get(i + 1).name);
-                }
-                catch(IndexOutOfBoundsException e){
-                    break;
-                }
+                 //   System.out.println("yeah "+ a.get(i + 1).name);
+
 
             }
         }
@@ -216,13 +324,13 @@ public class Main {
             }
             jews++;
         }
-        System.out.println("the holocaust");
+  //      System.out.println("the holocaust");
         for(Object o : newList){
             if(o instanceof Team){
-                System.out.println(((Team) o).getName());
+          //      System.out.println(((Team) o).getName());
             }
         }
-        System.out.println("lmao");
+       // System.out.println("lmao");
         return newList;
     }
 }
