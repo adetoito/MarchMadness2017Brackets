@@ -64,7 +64,7 @@ public class Main {
         System.out.println("TEAMS:");
         for (int i = 0; i < sixtyfour.size(); i++) {
             Team temp = sixtyfour.get(i);
-            System.out.println(i + 1 + ": " + temp.name + " // Win/Loss: " + temp.i);
+            System.out.println(i + 1 + ": " + temp.name + " // Wins-Losses(weighted,over past 3 years): " + temp.i);
         }
         System.out.println("=============================\n");
 
