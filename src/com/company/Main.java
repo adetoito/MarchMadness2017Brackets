@@ -4,6 +4,140 @@ import java.util.*;
 import java.io.*;
 
 public class Main {
+    /* 
+   --EAST-- 
+    1
+Villanova
+16
+Mt St Mary's
+8
+Wisconsin
+9
+Va. Tech
+5
+Virginia
+12
+UNC-Wilm.
+4
+Florida
+13
+ETSU
+6
+SMU
+11
+USC
+3
+Baylor
+14
+New Mex. St.
+7
+S. Carolina
+10
+Marquette
+2
+Duke
+15
+Troy
+--WEST--
+1
+Gonzaga
+16
+S. Dak. St.
+8
+Northwestern
+9
+Vanderbilt
+5
+Notre Dame
+12
+Princeton
+4
+W. Virginia
+13
+Bucknell
+6
+Maryland
+11
+Xavier
+3
+Florida St.
+14
+FGCU
+7
+St. Mary's
+10
+VCU
+2
+Arizona
+15
+North Dakota
+--MID--
+Kansas
+1
+UC Davis
+16
+Miami (Fla.)
+8
+Michigan St.
+9
+Iowa St.
+5
+Nevada
+12
+Purdue
+4
+Vermont
+13
+Creighton
+6
+Rhode Island
+11
+Oregon
+3
+Iona
+14
+Michigan
+7
+Oklahoma St.
+10
+Louisville
+2
+Jax. State
+15
+--SOUTH--
+    N. Carolina
+    1
+    Texas So.
+    16
+Arkansas
+8
+Seton Hall
+9
+Minnesota
+5
+Middle Tenn.
+12
+Butler
+4
+Winthrop
+13
+Cincinnati
+6
+Kansas St.
+11
+UCLA
+3
+Kent St.
+14
+Dayton
+7
+Wichita St.
+10
+Kentucky
+2
+N. Kentucky15
+
+    */
 
     public static void main(String[] args) throws IOException {
         Scanner scanTeams = new Scanner(new File("src/com/company/Teams.csv"));
